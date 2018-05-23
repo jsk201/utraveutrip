@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>旅游攻略-旅友网utravelu.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="酒店,酒店预订,酒店自营,即时预订">
+    <meta name="description" content="专业酒店推荐预订平台，带来详细酒店入住体验攻略，全方位了解酒店,助你挑选自己喜欢的酒店入住">
+    <link rel="shortcut icon" type="image/x-icon" href="img/travel.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/basic.css" type="text/css" media="screen">
+</head>
+<body>
+<!-- 头部start-->
+<div id="header" class="navbar navbar-fixed-top" style="position: fixed; width: 100%; top: 0;">
+    <div class="utu_container">
+        <div class="utu_navbar-header">
+                <a href="http://www.utravelu.com/" class="utu_navbar-brand logo"></a>
+        </div>
+        <div class="utu_navbar-collapse" id="navbar-collapse">
+            <ul class="utu_navbar-nav">
+                <li>
+                    <a href="javascript:;" class="headlogin mr_30 wechat">
+                        <div class="pc-hotel-2-code">
+                            <img src="/img/code-c.png" alt="">
+                            <div class="pc-hotel-2-code-t">
+                                    <span>扫一扫</span>
+                                    <span>关注旅友网公众号</span>
+                            </div>
+                        </div>
+                    </a>
+                        <!--<a href="javascript:window.open('/login.html?requrl='+window.location.href)" target="_blank" class="headlogin mr_10">登录</a>
+                        <a href="/register.html" target="_blank" class="headReg">注册</a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hotel-tips-header" style="position: fixed; width: 100%; top: 60px; z-index: 100;">
+    <ul>
+        <li>
+            <a href="http://www.utravelu.com">首页</a>
+        </li>
+        <li>
+            <a href="/index.html">酒店推荐</a>
+        </li>
+        <li class="active"><a href="javascript:;">签证频道</a></li>
+        <li>
+            <a href="/space.html" class="last-border">旅游攻略</a>
+        </li>
+     </ul>
+</div>
+ <!-- 头部end-->
+
+<!-- 进度start -->
+<div class="clear progress">
+    <div class="fl long_line">
+         <span></span>
+    </div>
+    <div class="fl pro_box">
+         <div class="txt_box red">
+             <span class="num">1</span>
+             <span class="short_line"></span>
+             <span class="txt">填写订单</span>
+             <span class="short_line"></span>
+         </div>
+         <div class="txt_box">
+             <span class="num">2</span>
+             <span class="short_line"></span>
+             <span class="txt">客房确认</span>
+             <span class="short_line"></span>
+         </div>
+         <div class="txt_box">
+             <span class="num">3</span>
+             <span class="short_line"></span>
+             <span class="txt">在线支付</span>
+             <span class="short_line"></span>
+         </div>
+         <div class="txt_box">
+             <span class="num">3</span>
+             <span class="short_line"></span>
+             <span class="txt">预约完成</span>
+         </div>
+    </div>
+    <div class="fl long_line">
+         <span></span>
+    </div>
+</div>
+<!-- 进度end -->
+
+<div class="confirm">
+    <div class="fl infor">
+        <p>请您及时付款，以便订单尽快处理！  订单号：<span>354855513</span></p>
+        <p>请您在<span>30分钟内</span>完成支付，过期自动取消！</p>
+        <p>产品类型：<span>三亚4日游</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出发日期：<span>2017年06月01日</span></p>
+        <p>出行人数：<span>成人2</span>人，<span>儿童1</span>人
+    </div>
+    <div class="fr price">
+        订单总额:<span>￥3314元</span>
+    </div>
+</div>
+
+<div class="aplay_road">
+    <h3>选择支付方式</h3>
+    <a href="#" class="aplay"><span>推荐</span></a>
+    <a href="#" class="unionpay active"><i></i></a>
+    <a href="#" class="wechat"></a>
+</div>
+
+<!--footer部分start-->
+<div id="footer">
+        <!--旅友网底部版权声明-->
+        <div class="utu_container">
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">关于旅友网</a> |
+                <a class="cocc" href="http://www.utravelu.com/daohang" target="_blank">酒店导航</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/joinUs.html" target="_blank">酒店合作</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/fdlyLinks.html" target="_blank">友情链接</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/contactUs.html" target="_blank">联系我们</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/qualification.html" target="_blank">上海星游国际旅行社有限公司</a>&nbsp;&nbsp;
+                旅行社业务经营许可证编号：L-SH-01243
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/pact.html#7" target="_blank">Copyright©2002-<span id="cur-year">2017
+                </span>&nbsp;&nbsp;版权所有&nbsp;
+                </a>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">上海旅之窗网络有限公司</a>&nbsp;
+                <a class="cocc" href="http://www.utravelu.com/index.html" target="_blank">utravelu.com</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">ICP证：沪B2-20070228</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备06034306号</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20160205100245751" target="_blank" rel="nofollow">
+                    <img src="img/IC.png" alt="">
+                    上海工商
+                </a>&nbsp;
+                <a class="cocc" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002088" target="_blank" rel="nofollow">
+                    <img src="img/PSB.png" alt="">
+                    沪公网安备 3101010200208
+                </a>
+                <script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=9759945&amp;url=http%3A%2F%2Ftrip.utravelu.com%2Findex.html&amp;source=&amp;rnd=2090328833&amp;hm=1"></script><script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="https://hm.baidu.com/hm.js?0a5819fceed2465f0799df25eeffba2b"></script><script src="http://kxlogo.knet.cn/seallogo.dll?sn=e1609283101016477515cu000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e1609283101016477515cu000000&amp;ct=df&amp;a=1&amp;pa=0.7470008283853531" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>
+                <script src="http://s4.cnzz.com/z_stat.php?id=1261269990&amp;web_id=1261269990" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1261269990&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1261269990" target="_blank" title="站长统计">站长统计</a>
+            </p>
+        </div>
+    </div>
+<!--footer部分end-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

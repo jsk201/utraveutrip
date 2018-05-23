@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>旅游攻略-旅友网utravelu.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="酒店,酒店预订,酒店自营,即时预订">
+    <meta name="description" content="专业酒店推荐预订平台，带来详细酒店入住体验攻略，全方位了解酒店,助你挑选自己喜欢的酒店入住">
+    <link rel="shortcut icon" type="image/x-icon" href="img/travel.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/basic.css" type="text/css" media="screen">
+</head>
+<body>
+<!-- 头部start-->
+<div id="header" class="navbar navbar-fixed-top" style="position: fixed; width: 100%; top: 0;">
+    <div class="utu_container">
+        <div class="utu_navbar-header">
+                <a href="http://www.utravelu.com/" class="utu_navbar-brand logo"></a>
+        </div>
+        <div class="utu_navbar-collapse" id="navbar-collapse">
+            <ul class="utu_navbar-nav">
+                <li>
+                    <a href="javascript:;" class="headlogin mr_30 wechat">
+                        <div class="pc-hotel-2-code">
+                            <img src="/img/code-c.png" alt="">
+                            <div class="pc-hotel-2-code-t">
+                                    <span>扫一扫</span>
+                                    <span>关注旅友网公众号</span>
+                            </div>
+                        </div>
+                    </a>
+                        <!--<a href="javascript:window.open('/login.html?requrl='+window.location.href)" target="_blank" class="headlogin mr_10">登录</a>
+                        <a href="/register.html" target="_blank" class="headReg">注册</a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hotel-tips-header" style="position: fixed; width: 100%; top: 60px; z-index: 100;">
+    <ul>
+        <li>
+            <a href="http://www.utravelu.com">首页</a>
+        </li>
+        <li>
+            <a href="/index.html">酒店推荐</a>
+        </li>
+        <li class="active"><a href="javascript:;">签证频道</a></li>
+        <li>
+            <a href="/space.html" class="last-border">旅游攻略</a>
+        </li>
+     </ul>
+</div>
+<!-- 头部end-->
+
+<!-- 进度start -->
+<div class="clear progress">
+    <div class="fl long_line">
+         <span></span>
+    </div>
+    <div class="fl pro_box">
+         <div class="txt_box red">
+             <span class="num">1</span>
+             <span class="short_line"></span>
+             <span class="txt">填写订单</span>
+             <span class="short_line"></span>
+         </div>
+         <div class="txt_box">
+             <span class="num">2</span>
+             <span class="short_line"></span>
+             <span class="txt">填写订单</span>
+             <span class="short_line"></span>
+         </div>
+         <div class="txt_box">
+             <span class="num">3</span>
+             <span class="short_line"></span>
+             <span class="txt">填写订单</span>
+         </div>
+    </div>
+    <div class="fl long_line">
+         <span></span>
+    </div>
+</div>
+<!-- 进度end -->
+
+<div class="wrap clear">
+    <div class="order_det fl">
+        <div class="order_top">
+            <div class="title">
+                <div class="fl img"><img src="img/visa3.png" alt="请绑定签证标题"></div>
+                <div class="fr txt">
+                    <h1><a href="#请绑定到列表页">白领商务首选三亚4日跟团游</a></h1>
+                    <p>
+                        <span>出发日期：<i>2016年6月1日</i></span>
+                        <span>返回日子: <i>2016年6月1日</i></span>
+                    </p>
+                    <p>
+                        <span>出发地：<i>上海</i></span>
+                        <span>目的地: <i>三亚</i></span>
+                    </p>
+                    <p>
+                        <span>行程天数：<i>180天</i></span>
+                    </p>
+                    <div class="clear person">
+                        <span>出行人数:</span>
+                        <span><b>-</b><b class="num"></b><b>+</b></span><span class="t">成人</span>
+                        <span><b>-</b><b class="num"></b><b>+</b></span><span class="t">儿童</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login_box">
+            现在<a href="#">登录</a>旅友网预定，可享受会员专属优惠，积分回馈。
+        </div>
+
+        <div class="link">
+            <div class="link_tab">
+                <h3>联系人信息:</h3>
+                <p>
+                    <span class="active">联系人姓名：</span>
+                    <input class="w290" type="text" placeholder="请输入联系人姓名">
+                </p>
+                <p>
+                    <span class="active">联系人手机：</span>
+                    <select class="w110" >
+                        <option>中国大陆(+86)</option>
+                        <option>1111</option>
+                        <option>2222</option>
+                        <option>3333</option>
+                        <option>4444</option>
+                    </select>
+                    <input type="text" class="w170" placeholder="请输入11位手机号">
+                    <em>请正确填写手机号，无效手机号可能导致订单取消！</em>
+                </p>
+                <p>
+                    <span class="active">E-mail：</span>
+                    <input type="text" class="w290" placeholder="请输入真实邮箱地址，用于发送申请资料">
+                </p>
+                <p>
+                    <span>微信：</span>
+                    <input type="text" class="w290" placeholder="用于境外24小时服务">
+                </p>
+            </div>
+
+            <div class="link_tab">
+                <h3>发票信息：</h3>
+                <div id="yuyue">
+                    <input type="radio" name="sex" value="" checked="checked" class="sex" />
+                    <div class="dianji"></div>
+                    <b class="mar50">不需要发票</b>
+                    <input type="radio" name="sex" value="" class="sex sex1" />
+                    <div class="dianji dianji1"></div>
+                    <b class="mar350">需要发票（发票由旅友网 星游 开具，于您出游归来后的5个工作日快递寄出，请注意查收。</b>
+                </div>
+                <p>
+                    <span>发票明细：</span>
+                    <select class="w200">
+                        <option>旅游费(增值税普通发票)</option>
+                        <option>1111</option>
+                        <option>2222</option>
+                        <option>3333</option>
+                        <option>4444</option>
+                    </select>
+                    <small>备注:<input type="checkbox">发票注明酒店名称和入住、退房时间</small>
+                </p>
+                <p>
+                    <span>发票抬头：</span>
+                    <input type="text" class="w290" placeholder="请填写个人姓名或公司名称">
+                </p>
+                <p>
+                    <span>快递费用：</span>
+                    1.江浙沪地区运费￥10；   2.江浙沪以外地区￥12；   3.偏远地区￥15
+                </p>
+                <p>
+                    <span>收件人：</span>
+                    <input type="text" class="w170" placeholder="请填写个人姓名或公司名称">
+                </p>
+                <p>
+                    <span>联系方式：</span>
+                    <input type="text" class="w170" placeholder="请填写个人姓名或公司名称">
+                </p>
+                <p>
+                    <span>邮递地址：</span>
+                    <input type="text" class="w290" placeholder="请填写个人姓名或公司名称">
+                </p>
+                <p>
+                    <span>邮编：</span>
+                    <input type="text" placeholder="请填写个人姓名或公司名称">
+                </p>
+            </div>
+        </div>
+        <div class="remark">
+            <h3>备注说明：</h3>
+            <textarea rows = "6" placeholder="请输入备注信息"></textarea>
+        </div>
+        <div class="order_btn">
+            <a href="#"><<返回,上一步</a>
+            <button>同意以上条款，去支付</button>
+        </div>
+    </div>
+    <div class="order_fee fr">
+        <p>
+            <span class="fl name">团费</span>
+            <span class="fr list">
+                <b>成人<b>￥<b>1072</b>*<b>2</b></b></b>
+                <b>儿童<b>￥<b>1072</b>*<b>2</b></b></b>
+            </span>
+        </p>
+<!--         <p>
+    <span class="fl name">服务费</span>
+    <span class="fr"> <b>1072</b>*<b>2</b></span>
+</p> -->
+        <p>
+            <span class="fl name">快递费</span>
+            <span class="fr">￥10</span>
+        </p>
+        <p class="heji">
+            <span class="fl name">订单总价</span>
+            <span class="fr">￥3314</span>
+        </p>
+    </div>
+</div>
+
+<!--footer部分start-->
+<div id="footer">
+        <!--旅友网底部版权声明-->
+        <div class="utu_container">
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">关于旅友网</a> |
+                <a class="cocc" href="http://www.utravelu.com/daohang" target="_blank">酒店导航</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/joinUs.html" target="_blank">酒店合作</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/fdlyLinks.html" target="_blank">友情链接</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/contactUs.html" target="_blank">联系我们</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/qualification.html" target="_blank">上海星游国际旅行社有限公司</a>&nbsp;&nbsp;
+                旅行社业务经营许可证编号：L-SH-01243
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/pact.html#7" target="_blank">Copyright©2002-<span id="cur-year">2017
+                </span>&nbsp;&nbsp;版权所有&nbsp;
+                </a>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">上海旅之窗网络有限公司</a>&nbsp;
+                <a class="cocc" href="http://www.utravelu.com/index.html" target="_blank">utravelu.com</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">ICP证：沪B2-20070228</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备06034306号</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20160205100245751" target="_blank" rel="nofollow">
+                    <img src="img/IC.png" alt="">
+                    上海工商
+                </a>&nbsp;
+                <a class="cocc" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002088" target="_blank" rel="nofollow">
+                    <img src="img/PSB.png" alt="">
+                    沪公网安备 3101010200208
+                </a>
+                <script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=9759945&amp;url=http%3A%2F%2Ftrip.utravelu.com%2Findex.html&amp;source=&amp;rnd=2090328833&amp;hm=1"></script><script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="https://hm.baidu.com/hm.js?0a5819fceed2465f0799df25eeffba2b"></script><script src="http://kxlogo.knet.cn/seallogo.dll?sn=e1609283101016477515cu000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e1609283101016477515cu000000&amp;ct=df&amp;a=1&amp;pa=0.7470008283853531" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>
+                <script src="http://s4.cnzz.com/z_stat.php?id=1261269990&amp;web_id=1261269990" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1261269990&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1261269990" target="_blank" title="站长统计">站长统计</a>
+            </p>
+        </div>
+    </div>
+<!--footer部分end-->
+    <script type="text/javascript" src="http://www.sucaihuo.com/Public/js/other/jquery.js"></script> 
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        $('#content').niceScroll({
+            cursorcolor: "#ccc",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "5px", //像素光标的宽度
+            cursorborder: "0", //   游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: false //是否隐藏滚动条
+        });
+    </script>
+</body>
+</html>

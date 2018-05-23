@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>旅游攻略-旅友网utravelu.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="酒店,酒店预订,酒店自营,即时预订">
+    <meta name="description" content="专业酒店推荐预订平台，带来详细酒店入住体验攻略，全方位了解酒店,助你挑选自己喜欢的酒店入住">
+    <link rel="shortcut icon" type="image/x-icon" href="img/travel.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/basic.css" type="text/css" media="screen">
+    <script type=text/javascript src=My97DatePicker/WdatePicker.js></script>
+</head>
+<body>
+<!-- 头部start-->
+<div id="header" class="navbar navbar-fixed-top" style="position: fixed; width: 100%; top: 0;">
+    <div class="utu_container">
+        <div class="utu_navbar-header">
+                <a href="http://www.utravelu.com/" class="utu_navbar-brand logo"></a>
+        </div>
+        <div class="utu_navbar-collapse" id="navbar-collapse">
+            <ul class="utu_navbar-nav">
+                <li>
+                    <a href="javascript:;" class="headlogin mr_30 wechat">
+                        <div class="pc-hotel-2-code">
+                            <img src="/img/code-c.png" alt="">
+                            <div class="pc-hotel-2-code-t">
+                                    <span>扫一扫</span>
+                                    <span>关注旅友网公众号</span>
+                            </div>
+                        </div>
+                    </a>
+                        <!--<a href="javascript:window.open('/login.html?requrl='+window.location.href)" target="_blank" class="headlogin mr_10">登录</a>
+                        <a href="/register.html" target="_blank" class="headReg">注册</a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hotel-tips-header" style="position: fixed; width: 100%; top: 60px; z-index: 100;">
+    <ul>
+        <li>
+            <a class="borderr border1" href="http://www.utravelu.com">首页</a>
+        </li>
+        <li>
+            <a class="border1" href="/index.html">酒店推荐</a>
+        </li>
+        <li>
+            <a href="/space.html">旅游攻略</a>
+        </li>
+        <li class="active"><a href="javascript:;">旅游频道</a></li>
+    </ul>
+</div>
+ <!-- 头部end-->
+
+<!-- 面包屑start-->
+<div class="wraper clear visa-bead">
+    <a href="/">酒店主页</a>>
+    <a href="#">旅游签证</a>>
+    <a href="#">美国签证</a>
+</div>
+<!-- 面包屑start-->
+
+<div class="wraper clear visa-info">
+    <div class="img fl">
+        <div class="imgnav" id="imgnav"> 
+             <div id="img"> 
+                <img src="images/100260_1306276811398.jpg" width="780" height="570"/>
+                <img src="images/100261_1306276853791.jpg"  width="780" height="570"/>
+                <img src="images/100391_4381_1306217104406.jpg" width="780" height="570" />
+                <img src="images/bImg.jpg"  width="780" height="570" />
+                <img src="images/100260_1306276811398.jpg" width="780" height="570"/>
+                <img src="images/100261_1306276853791.jpg"  width="780" height="570"/>
+                <img src="images/100391_4381_1306217104406.jpg" width="780" height="570" />
+                <img src="images/bImg.jpg"  width="780" height="570" />
+                <img src="images/100260_1306276811398.jpg" width="780" height="570"/>
+                <img src="images/100261_1306276853791.jpg"  width="780" height="570"/>
+                <div id="front" title="上一张"><a href="javaScript:void(0)" class="pngFix"></a></div>
+                <div id="next" title="下一张"><a href="javaScript:void(0)" class="pngFix"></a></div>
+            </div>
+            <div id="cbtn">
+                <div id="cSlideUl">
+                    <ul>
+                        <li><img src="images/100260_1306276811398.jpg"/><tt></tt></li>
+                        <li><img src="images/100261_1306276853791.jpg"/><tt></tt></li>
+                        <li><img src="images/100391_4381_1306217104406.jpg" /><tt></tt></li>
+                        <li><img src="images/bImg.jpg"/><tt></tt></li>
+                        <li><img src="images/100260_1306276811398.jpg"/><tt></tt></li>
+                        <li><img src="images/100261_1306276853791.jpg"/><tt></tt></li>
+                        <li><img src="images/100391_4381_1306217104406.jpg" /><tt></tt></li>
+                        <li><img src="images/bImg.jpg"/><tt></tt></li>
+                        <li><img src="images/100260_1306276811398.jpg"/><tt></tt></li>
+                        <li><img src="images/100261_1306276853791.jpg"/><tt></tt></li>
+                    </ul>
+                </div>
+            </div>         
+        </div>
+        <div id="trip_data">
+        </div>
+    </div>
+    <div class="txt fl">
+        <h1>【白领商务首选*5月14至17日出行立减517元/成人】三亚4日跟团游>全程五星酒店</h1>
+        <span class="mar_t10">【编号：219173p2】</span>
+        <div class="line">
+            <span>旅游线路：</span><span><b>D1</b>深圳-三亚</span>--<span><b>D2</b>深圳-三亚</span>--<span><b>D3</b>深圳-三亚</span>--<span><b>D4</b>深圳-三亚</span>--<span><b>D6</b>深圳-三亚</span>--<span><b>D7</b>深圳-三亚</span>
+        </div>
+        <span>出发地点：上海</span>
+        <div class="box">
+            <div class="price">
+                <div class="br">
+                    <span>出发</span>
+                    <span class="bor w120">请选择出发日期</span>
+                    <span class="red">￥698起</span>
+                    <span class="c">￥起价说明</span>            
+                    <div class="sel-drop">
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                    </div>
+                    <p>返回日期&nbsp;&nbsp;&nbsp;&nbsp;2017-6-21</p>
+                    <div class="br1">
+                        <span>成人<span class="bor w40">1</span></span>
+                        <span>儿童 <span class="bor w40">1</span></span>
+                        <span>儿童价说明</span>
+                        <div class="sel-drop">
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                        </div>                
+                        <div class="sel-drop children">
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                        </div> 
+                    </div>                  
+                </div>
+
+                <div class="price_btn">
+                    <a href="javascript:;">￥14656</a>
+                    <a href="javascript:;" class="active">立即预订</a>
+                </div>                               
+            </div>
+            <div class="tips">
+                <span>旅游产品</span>
+                <span>推荐语</span>
+                <p>我们一点一滴的努力，只为更好的服务。政府接待指定专职导游，为您提供24小时管家式服务，让您的行程更舒心。杜绝自费，杜绝购物！全程五星标准酒店享受国宾待遇！机场落地零等待，专人专车无缝对接，每团不超过15位成人。空座率达到30%，只为您的舒适！
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="wraper clear detail">
+    <div class="cate fl">
+        <ul>
+            <li><a href="#">预订须知</a></li>
+            <li><a href="#">签证材料</a></li>
+            <li><a href="#" class="active">温馨提示</a></li>
+            <li><a href="#">签证中心</a></li>
+            <li><a href="#">费用说明</a></li>
+            <li><a href="#">预订流程</a></li>
+        </ul>
+    </div>
+    <div class="cotent">
+        <div class="product">
+            <div class="item">
+                <h3>特别优惠</h3>
+                <pre>
+劲爆优惠来袭：
+5月14、15、16、17日出行立减517元/成人，儿童不参与此优惠活动！
+下单成功后客服人员手工调价！   
+                </pre>        
+            </div>
+            <div class="item">
+                <h3>特别优惠</h3>
+                <pre>
+劲爆优惠来袭：
+5月14、15、16、17日出行立减517元/成人，儿童不参与此优惠活动！
+下单成功后客服人员手工调价！   
+                </pre>        
+            </div>
+        </div>
+        <div class="line">
+            <div class="tab">
+                <ul>
+                    <li class="active">第一天</li>
+                    <li>第二天</li>
+                    <li>第三天</li>
+                    <li>第四天</li>
+                    <li>第五天</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h2>行程说明</h2>
+                <h3><i>D1</i>深圳-三亚</h3>
+                <pre>乘机飞抵鹿城---三亚，机场专人欢迎接机，落地即走，无缝对接，即时送达酒店；酒店大堂专人等候，为客人办理入住手续。入住君澜三亚湾迎宾馆酒店尊享礼遇：大厨亲手制作纯正白巧克力“逍遥海南”欢迎牌，海南时鲜果盘一份!每间房赠送两辆自行车，悠游三亚湾一小时。（使用时间：08:00-20:00）</pre>
+                <p>交通:飞机</p>
+                <p>用餐:6个正餐+2个晚餐</p>
+                <p>住宿:三亚</p>
+                <div class="img">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                </div>
+            </div>
+            <div class="item">
+                <h3><i>D2</i>深圳-三亚</h3>
+                <pre>乘机飞抵鹿城---三亚，机场专人欢迎接机，落地即走，无缝对接，即时送达酒店；酒店大堂专人等候，为客人办理入住手续。入住君澜三亚湾迎宾馆酒店尊享礼遇：大厨亲手制作纯正白巧克力“逍遥海南”欢迎牌，海南时鲜果盘一份!每间房赠送两辆自行车，悠游三亚湾一小时。（使用时间：08:00-20:00）</pre>
+                <p>交通:飞机</p>
+                <p>用餐:6个正餐+2个晚餐</p>
+                <p>住宿:三亚</p>
+                <div class="img">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/4.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="cost">
+            <div class="title">
+                <ul>
+                    <li class="infor">费用说明</li>
+                    <li class="active">费用包含</li>
+                    <li>费用不包含</li>
+                </ul>
+            </div>
+            <div class="con">
+                <div class="item" style="display: block;">
+                    <pre>
+1、交通：深圳/三亚往返程机票经济舱、机场建设费、燃油税（不含临时上调的机场税费）；海南省3年内贵宾空调旅游车（GPS高一级车、空座率30%）；每团不超过15人（不包含儿童）空座率30%不适用于4人以下团队。
+参考航班如下：
+深圳-三亚：CZ6497,19:45/HU7750,21:20/CZ6758,23:20
+三亚-深圳：CZ6498,23:10/ZH9322,23:35/HU7749,23:40
+
+2、酒店：如遇主推酒店无房，则入住备选酒店。产品中的五星酒店为按五星标准酒店装修，因为新酒店，还未挂星；
+第一、二晚：
+君澜三亚湾迎宾馆至尊海景房（180度）  备选酒店：丽禾温德姆豪华湾景房/三亚湾皇冠假日度假酒店
+第三晚
+亚龙湾迎宾馆豪华池景房   备选酒店：亚龙湾华宇度假酒店高级房/亚龙湾五号别墅
+                    </pre>
+                </div>
+                <div class="item">
+                    <pre>
+3、交通：深圳/三亚往返程机票经济舱、机场建设费、燃油税（不含临时上调的机场税费）；海南省3年内贵宾空调旅游车（GPS高一级车、空座率30%）；每团不超过15人（不包含儿童）空座率30%不适用于4人以下团队。
+参考航班如下：
+深圳-三亚：CZ6497,19:45/HU7750,21:20/CZ6758,23:20
+三亚-深圳：CZ6498,23:10/ZH9322,23:35/HU7749,23:40
+
+4、酒店：如遇主推酒店无房，则入住备选酒店。产品中的五星酒店为按五星标准酒店装修，因为新酒店，还未挂星；
+第一、二晚：
+君澜三亚湾迎宾馆至尊海景房（180度）  备选酒店：丽禾温德姆豪华湾景房/三亚湾皇冠假日度假酒店
+第三晚
+亚龙湾迎宾馆豪华池景房   备选酒店：亚龙湾华宇度假酒店高级房/亚龙湾五号别墅
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cost">
+            <div class="title">
+                <ul>
+                    <li class="infor1">预订须知</li>
+                    <li class="active">参加须知</li>
+                    <li>重要提示</li>
+                    <li>出行警示</li>
+                </ul>
+            </div>
+            <div class="con">
+                <div class="item" style="display: block;">
+                    <pre>
+1、交通：深圳/三亚往返程机票经济舱、机场建设费、燃油税（不含临时上调的机场税费）；海南省3年内贵宾空调旅游车（GPS高一级车、空座率30%）；每团不超过15人（不包含儿童）空座率30%不适用于4人以下团队。
+参考航班如下：
+深圳-三亚：CZ6497,19:45/HU7750,21:20/CZ6758,23:20
+三亚-深圳：CZ6498,23:10/ZH9322,23:35/HU7749,23:40
+
+2、酒店：如遇主推酒店无房，则入住备选酒店。产品中的五星酒店为按五星标准酒店装修，因为新酒店，还未挂星；
+第一、二晚：
+君澜三亚湾迎宾馆至尊海景房（180度）  备选酒店：丽禾温德姆豪华湾景房/三亚湾皇冠假日度假酒店
+第三晚
+亚龙湾迎宾馆豪华池景房   备选酒店：亚龙湾华宇度假酒店高级房/亚龙湾五号别墅
+                    </pre>
+                </div>
+                <div class="item">
+                    <pre>
+3、交通：深圳/三亚往返程机票经济舱、机场建设费、燃油税（不含临时上调的机场税费）；海南省3年内贵宾空调旅游车（GPS高一级车、空座率30%）；每团不超过15人（不包含儿童）空座率30%不适用于4人以下团队。
+参考航班如下：
+深圳-三亚：CZ6497,19:45/HU7750,21:20/CZ6758,23:20
+三亚-深圳：CZ6498,23:10/ZH9322,23:35/HU7749,23:40
+
+4、酒店：如遇主推酒店无房，则入住备选酒店。产品中的五星酒店为按五星标准酒店装修，因为新酒店，还未挂星；
+第一、二晚：
+君澜三亚湾迎宾馆至尊海景房（180度）  备选酒店：丽禾温德姆豪华湾景房/三亚湾皇冠假日度假酒店
+第三晚
+亚龙湾迎宾馆豪华池景房   备选酒店：亚龙湾华宇度假酒店高级房/亚龙湾五号别墅
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="item">
+                <h3>特别优惠</h3>
+                <div class="progess"></div>
+        
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+<!--footer部分start-->
+<div id="footer">
+        <!--旅友网底部版权声明-->
+        <div class="utu_container">
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">关于旅友网</a> |
+                <a class="cocc" href="http://www.utravelu.com/daohang" target="_blank">酒店导航</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/joinUs.html" target="_blank">酒店合作</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/fdlyLinks.html" target="_blank">友情链接</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/contactUs.html" target="_blank">联系我们</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/qualification.html" target="_blank">上海星游国际旅行社有限公司</a>&nbsp;&nbsp;
+                旅行社业务经营许可证编号：L-SH-01243
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/pact.html#7" target="_blank">Copyright©2002-<span id="cur-year">2017
+                </span>&nbsp;&nbsp;版权所有&nbsp;
+                </a>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">上海旅之窗网络有限公司</a>&nbsp;
+                <a class="cocc" href="http://www.utravelu.com/index.html" target="_blank">utravelu.com</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">ICP证：沪B2-20070228</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备06034306号</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20160205100245751" target="_blank" rel="nofollow">
+                    <img src="img/IC.png" alt="">
+                    上海工商
+                </a>&nbsp;
+                <a class="cocc" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002088" target="_blank" rel="nofollow">
+                    <img src="img/PSB.png" alt="">
+                    沪公网安备 3101010200208
+                </a>
+                <script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=9759945&amp;url=http%3A%2F%2Ftrip.utravelu.com%2Findex.html&amp;source=&amp;rnd=2090328833&amp;hm=1"></script><script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="https://hm.baidu.com/hm.js?0a5819fceed2465f0799df25eeffba2b"></script><script src="http://kxlogo.knet.cn/seallogo.dll?sn=e1609283101016477515cu000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e1609283101016477515cu000000&amp;ct=df&amp;a=1&amp;pa=0.7470008283853531" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>
+                <script src="http://s4.cnzz.com/z_stat.php?id=1261269990&amp;web_id=1261269990" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1261269990&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1261269990" target="_blank" title="站长统计">站长统计</a>
+            </p>
+        </div>
+    </div>
+<!--footer部分end-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+$(document).ready(function(){                          
+    var index=0;
+    var length=$("#img img").length;
+    var i=1;
+    
+    //关键函数：通过控制i ，来显示图片
+    function showImg(i){
+        $("#img img")
+            .eq(i).stop(true,true).fadeIn(800)
+            .siblings("img").hide();
+         $("#cbtn li")
+            .eq(i).addClass("hov")
+            .siblings().removeClass("hov");
+    }
+    
+    function slideNext(){
+        if(index >= 0 && index < length-1) {
+             ++index;
+             showImg(index);
+        }else{
+            if(confirm("已经是最后一张,点击确定重新浏览！")){
+                showImg(0);
+                index=0;
+                aniPx=(length-5)*76+'px'; //所有图片数 - 可见图片数 * 每张的距离 = 最后一张滚动到第一张的距离
+                $("#cSlideUl ul").animate({ "top": "+="+aniPx },200);
+                i=1;
+            }
+            return false;
+        }
+        if(i<0 || i>length-5) {return false;}                         
+               $("#cSlideUl ul").animate({ "top": "-=76px" },200)
+               i++;
+    }
+     
+    function slideFront(){
+       if(index >= 1 ) {
+             --index;
+             showImg(index);
+        }
+        if(i<2 || i>length+5) {return false;}
+               $("#cSlideUl ul").animate({ "top": "+=76px" },200)
+               i--;
+    }   
+        $("#img img").eq(0).show();
+        $("#cbtn li").eq(0).addClass("hov");
+        $("#cbtn tt").each(function(e){
+            var str=(e+1)+"/"+length;
+            $(this).html(str)
+        })
+    
+        $(".picSildeRight,#next").click(function(){
+               slideNext();
+           })
+        $(".picSildeLeft,#front").click(function(){
+               slideFront();
+           })
+        $("#cbtn li").click(function(){
+            index  =  $("#cbtn li").index(this);
+            showImg(index);
+        }); 
+        $("#next,#front").hover(function(){
+            $(this).children("a").fadeIn();
+        },function(){
+            $(this).children("a").fadeOut();
+        })
+    })  
+</script>
+<script>
+WdatePicker({eCont:'trip_data',onpicked:function(dp){alert('你选择的日期是:'+dp.cal.getDateStr())}})
+</script>
+</body>
+</html>

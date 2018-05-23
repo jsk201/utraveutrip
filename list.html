@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>旅游攻略-旅友网utravelu.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="酒店,酒店预订,酒店自营,即时预订">
+    <meta name="description" content="专业酒店推荐预订平台，带来详细酒店入住体验攻略，全方位了解酒店,助你挑选自己喜欢的酒店入住">
+    <link rel="shortcut icon" type="image/x-icon" href="img/travel.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/basic.css" type="text/css" media="screen">
+</head>
+<body>
+<!-- 头部start-->
+<div id="header" class="navbar navbar-fixed-top" style="position: fixed; width: 100%; top: 0;">
+    <div class="utu_container">
+        <div class="utu_navbar-header">
+                <a href="http://www.utravelu.com/" class="utu_navbar-brand logo"></a>
+        </div>
+        <div class="utu_navbar-collapse" id="navbar-collapse">
+            <ul class="utu_navbar-nav">
+                <li>
+                    <a href="javascript:;" class="headlogin mr_30 wechat">
+                        <div class="pc-hotel-2-code">
+                            <img src="/img/code-c.png" alt="">
+                            <div class="pc-hotel-2-code-t">
+                                    <span>扫一扫</span>
+                                    <span>关注旅友网公众号</span>
+                            </div>
+                        </div>
+                    </a>
+                        <!--<a href="javascript:window.open('/login.html?requrl='+window.location.href)" target="_blank" class="headlogin mr_10">登录</a>
+                        <a href="/register.html" target="_blank" class="headReg">注册</a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hotel-tips-header" style="position: fixed; width: 100%; top: 60px; z-index: 100;">
+    <ul>
+        <li>
+            <a class="borderr border1" href="http://www.utravelu.com">订酒店</a>
+        </li>
+        <li>
+            <a class="border1" href="/index.html">酒店推荐</a>
+        </li>
+        <li>
+            <a class="borderr border1" href="/space.html">旅游攻略</a>
+        </li>        
+		<li>
+            <a href="/space.html">签证频道</a>
+        </li>
+        <li class="active"><a href="javascript:;">旅游频道</a></li>
+    </ul>
+</div>
+ <!-- 头部start-->
+
+<!-- banner部分start-->
+ <div class="visa-banner">
+
+	<div class="flexslider">
+		<ul class="slides">
+			<li style="background:url(img/img1.jpg) 50% 0 no-repeat;"></li>
+			<li style="background:url(img/img2.jpg) 50% 0 no-repeat;"></li>
+			<li style="background:url(img/img3.jpg) 50% 0 no-repeat;"></li>
+			<li style="background:url(img/img4.jpg) 50% 0 no-repeat;"></li>
+			<li style="background:url(img/img5.jpg) 50% 0 no-repeat;"></li>
+		</ul>
+	</div>
+</div>
+ <!-- banner部分end-->
+
+<!--当季推荐部分start-->
+<div class="wraper time-recomm clear">
+    <p>当季推荐</p>
+	<ul>
+		 <li>
+		 	<a href="#">
+		 		<img src="img/time2.png">
+		 		<div class="top">
+		 			<span>景点：阿萨德、阿萨德发、阿萨德、按时打算按时打算、阿萨德</span>
+		 		</div>		 			
+		 		<div class="down">
+		 			<span>泰国</span>
+		 		</div>
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#">
+		 		<img src="img/time2.png">
+		 		<div class="top">
+		 			<span>景点：阿萨德、阿萨德发、阿萨德、按时打算按时打算、阿萨德</span>
+		 		</div>		 			
+		 		<div class="down">
+		 			<span>泰国</span>
+		 		</div>
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#">
+		 		<img src="img/time2.png">
+		 		<div class="top">
+		 			<span>景点：阿萨德、阿萨德发、阿萨德、按时打算按时打算、阿萨德</span>
+		 		</div>		 			
+		 		<div class="down">
+		 			<span>泰国</span>
+		 		</div>
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#">
+		 		<img src="img/time2.png">
+		 		<div class="top">
+		 			<span>景点：阿萨德、阿萨德发、阿萨德、按时打算按时打算、阿萨德</span>
+		 		</div>		 			
+		 		<div class="down">
+		 			<span>泰国</span>
+		 		</div>
+		 	</a>
+		 </li>
+	</ul>
+</div>
+<!--当季推荐程部分end-->
+
+<!--全部产品start-->
+<div class="wraper clear">
+	<div class="all_pre">
+	 	<p>全部产品</p>
+		<div class="recommend-choice clear">
+		    <div class="recommend-li clear">
+		        <ul id="cityList">		                                
+		            <li><span>地区选择：</span></li>
+		            <li class="active"><a href="javascript:;">全部</a></li>
+		            <li><a href="javascript:;">上海</a></li>
+		            <li><a href="javascript:;">杭州</a></li>
+		            <li><a href="javascript:;">北京</a></li>	                               
+		            <li><a href="javascript:;">宁波</a></li>
+		            <li><a href="javascript:;">无锡</a></li>
+		            <li><a href="javascript:;">苏州</a></li> 
+		            <li><a href="javascript:;">黄山</a></li> 
+		            <li><a href="javascript:;">三亚</a></li>
+		            <li><a href="javascript:;">无锡</a></li>
+		            <li><a href="javascript:;">苏州</a></li> 
+		            <li><a href="javascript:;">黄山</a></li> 
+		            <li class="more"><a href="javascript:;">更多</a></li>    
+		        </ul>
+		        <div class="more-area">
+			        <div class="a1"></div>
+		            <div class="more-area-list">
+		                <em class="first-char">西部：</em>     
+		                <a href="javascript:;">峨眉山</a>
+		                <a href="javascript:;">乐山</a> 
+		                <a href="javascript:;">黄龙</a>                     
+		                <a href="javascript:;">九寨</a>                     
+		            </div>
+		            <div class="more-area-list">
+		                <em class="first-char">西部：</em>     
+		                <a href="javascript:;" class="active">峨眉山</a>
+		                <a href="javascript:;">乐山</a> 
+		                <a href="javascript:;">黄龙</a>                     
+		                <a href="javascript:;" class="hot">九寨</a>                     
+		            </div>                    
+		            <div class="more-area-list">
+		                <em class="first-char">西部：</em>     
+		                <a href="javascript:;">峨眉山</a>
+		                <a href="javascript:;">乐山</a> 
+		                <a href="javascript:;">黄龙</a>                     
+		                <a href="javascript:;">九寨</a>                     
+		            </div>                     
+		        </div>
+		        <div class="checkbox">
+		        	<span>已选地区：</span>
+		        	<span>漓江</span>
+		        </div>          
+		        <div class="checkbox">
+		            <span>线路选择：</span>
+		            <span class="active">不限</span>
+		            <span>
+		                <input type="checkbox" class="input_check" id="check1" value="0-150"><label for="check1"></label>三亚一地
+		            </span>
+		            <span>
+		                <input type="checkbox" class="input_check" id="check2" value="151-300"><label for="check2"></label>三亚+兴隆
+		            </span>
+		            <span>
+		                <input type="checkbox" class="input_check" id="check3" value="301-450"><label for="check3"></label>三亚+其他
+		            </span>
+		        </div>
+		        <div class="checkbox">
+		        	<span>出发日期：</span>
+		            <span class="active">不限</span>
+		            <span>5月<b>(21)</b></span>
+		            <span>5月<b>(21)</b></span>
+		        </div>
+		        <div class="checkbox">
+		        	<span>行程天数：</span>
+		            <span class="active">不限</span>
+		            <span>5月<b>(21)</b></span>
+		            <span>5月<b>(21)</b></span>
+		        </div>  		        
+		        <div class="checkbox">
+		        	<span>出发地点：</span>
+		            <span class="active">不限</span>
+		            <span>任意城市<b>(21)</b></span>
+		            <span>5月<b>(21)</b></span>
+		        </div> 		        
+		        <div class="checkbox">
+		        	<span>交通工具：</span>
+		            <span class="active">不限</span>
+		            <span>任意城市<b>(21)</b></span>
+		            <span>5月<b>(21)</b></span>
+		        </div>
+				<div class="checkbox delete">
+					<span>三亚一地</span>
+					<span>一天</span>
+					<span class="bor">任意城市</span>
+					<span class="all">清除所有条件</span>
+				</div>
+		        <div class="recommend-li clear">
+		            <ul class="sort">
+		                <li><span>默认排序：</span></li>
+		                <li data-sort="" class="active default">默认</li>
+		                <li data-sort="date">价格</li>
+		                <li data-sort="hot">销量</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<div class="trip_line_list">
+		    <ul>
+		    	<li class="clear">
+		    		<a href="javascript:;">
+		    			<div class="img"><img src="img/trip1.jpg"></div>
+		    			<div class="txt">
+		    				<h2><蜈支洲岛+西岛+玉带滩+博鳌成立会址4日跟团游 >广州双飞往返/全程四星+三亚升级一晚五星/纯玩不进店</h2>
+		    				<p>
+		    					<span>出发城市：<b>上海</b></span>
+		    					<span>行程天数：<b>4天</b></span>
+		    				</p>
+		    				<p>
+		    					<span>出发日期：</span>
+		    					<i>2016-05-28</i>,<i>2016-05-29</i>,<i>2016-06-01</i>,<i>2016-06-08</i>,<i>2016-06-10</i><i class="more">更多</i>
+		    				</p>
+		    			</div>
+			    		<div class="btn">
+			    			<span><b>￥52023</b>起/人</span>
+			    			<span href="javascript:;" class="price_btn">预订<em>在线支付</em></span>
+			    		</div>
+		    		</a>
+		    	</li>
+		    	<li class="clear">
+		    		<a href="javascript:;">
+		    			<div class="img"><img src="img/trip1.jpg"></div>
+		    			<div class="txt">
+		    				<h2><蜈支洲岛+西岛+玉带滩+博鳌成立会址4日跟团游 >广州双飞往返/全程四星+三亚升级一晚五星/纯玩不进店</h2>
+		    				<p>
+		    					<span>出发城市：<b>上海</b></span>
+		    					<span>行程天数：<b>4天</b></span>
+		    				</p>
+		    				<p>
+		    					<span>出发日期：</span>
+		    					<i>2016-05-28</i>,<i>2016-05-29</i>,<i>2016-06-01</i>,<i>2016-06-08</i>,<i>2016-06-10</i><i class="more">更多</i>
+		    				</p>
+		    			</div>
+			    		<div class="btn">
+			    			<span><b>￥52023</b>起/人</span>
+			    			<span href="javascript:;" class="price_btn">预订<em>在线支付</em></span>
+			    		</div>
+		    		</a>
+		    	</li>
+		    </ul>
+		</div>
+	</div>
+	<div class="hot_pre">
+		<div class="rank">
+			<p>热门产品排行</p>
+			<ul>
+				<li>
+					<h3><蜈支洲岛+西岛+玉带滩+博鳌成立会址4跟团游 >广州双飞往返/全程四星+三亚升</h3>
+					<span>￥5202起/人</span>
+					<b>1</b>
+				</li>			
+				<li>
+					<h3><蜈支洲岛+西岛+玉带滩+博鳌成立会址4跟团游 >广州双飞往返/全程四星+三亚升</h3>
+					<span>￥5202起/人</span>
+					<b>2</b>
+				</li>
+			</ul>
+		</div>
+		<div class="des">
+			<p>热门目的地</p>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">漓江</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄龙九寨</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+			<a href="javascript:;">黄果树</a>
+		</div>	
+	</div>
+</div>
+<!--全部部分end-->
+
+
+
+<!--footer部分start-->
+<div id="footer">
+        <!--旅友网底部版权声明-->
+        <div class="utu_container">
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">关于旅友网</a> |
+                <a class="cocc" href="http://www.utravelu.com/daohang" target="_blank">酒店导航</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/joinUs.html" target="_blank">酒店合作</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/fdlyLinks.html" target="_blank">友情链接</a> |
+                <a class="cocc" href="http://www.utravelu.com/userCenter/contactUs.html" target="_blank">联系我们</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/qualification.html" target="_blank">上海星游国际旅行社有限公司</a>&nbsp;&nbsp;
+                旅行社业务经营许可证编号：L-SH-01243
+            </p>
+            <p>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/pact.html#7" target="_blank">Copyright©2002-<span id="cur-year">2017
+                </span>&nbsp;&nbsp;版权所有&nbsp;
+                </a>
+                <a class="cocc" href="http://www.utravelu.com/userCenter/aboutLY.html" target="_blank">上海旅之窗网络有限公司</a>&nbsp;
+                <a class="cocc" href="http://www.utravelu.com/index.html" target="_blank">utravelu.com</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">ICP证：沪B2-20070228</a>&nbsp;
+                <a class="cocc" href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备06034306号</a>
+            </p>
+            <p>
+                <a class="cocc" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20160205100245751" target="_blank" rel="nofollow">
+                    <img src="img/IC.png" alt="">
+                    上海工商
+                </a>&nbsp;
+                <a class="cocc" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002088" target="_blank" rel="nofollow">
+                    <img src="img/PSB.png" alt="">
+                    沪公网安备 3101010200208
+                </a>
+                <script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=9759945&amp;url=http%3A%2F%2Ftrip.utravelu.com%2Findex.html&amp;source=&amp;rnd=2090328833&amp;hm=1"></script><script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="https://hm.baidu.com/hm.js?0a5819fceed2465f0799df25eeffba2b"></script><script src="http://kxlogo.knet.cn/seallogo.dll?sn=e1609283101016477515cu000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e1609283101016477515cu000000&amp;ct=df&amp;a=1&amp;pa=0.7470008283853531" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="http://rr.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span>
+                <script src="http://s4.cnzz.com/z_stat.php?id=1261269990&amp;web_id=1261269990" language="JavaScript"></script><script src="http://c.cnzz.com/core.php?web_id=1261269990&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1261269990" target="_blank" title="站长统计">站长统计</a>
+            </p>
+        </div>
+    </div>
+<!--footer部分end-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: false
+	});
+});
+</script>
+</body>
+</html>
